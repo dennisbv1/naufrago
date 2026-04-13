@@ -17,7 +17,7 @@ export default function Ruleta() {
   return (
     <div className="ruleta-container">
       <img
-        src="/assets/ruleta.png"
+        src="./assets/ruleta.png"
         alt="Ruleta tropical"
         className={`ruleta ${spinning ? "spinning" : ""}`}
         style={{ transform: `rotate(${rotation}deg)` }}
