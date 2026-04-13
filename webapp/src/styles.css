@@ -94,25 +94,53 @@ body, html, #root {
   z-index: 2;
 }
 
-/* Canvas centrado */
-#canvas {
+/* Contenedor ruleta */
+.ruleta-container {
+  position: relative;
   z-index: 1;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Botón girar */
+/* Flecha arriba */
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid black;
+  margin-bottom: 10px;
+}
+
+/* Imagen ruleta */
+.ruleta-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ruleta {
+  width: 300px;
+  height: 300px;
+}
+
+/* Botón girar en el centro */
 .spin-btn {
-  z-index: 1;
+  position: absolute;
   background-color: #ff7a5a;
   color: white;
   border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
-  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 1rem;
   cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Cuadro de resultado */
+/* Cuadro resultado */
 .result-box {
   position: absolute;
   bottom: 100px;
@@ -139,6 +167,7 @@ body, html, #root {
   font-size: 1rem;
   cursor: pointer;
 }
+
 
 
 /* Mercado */
