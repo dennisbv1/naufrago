@@ -1,5 +1,5 @@
 import React from "react";
-import mercadoImg from "..//assets/mercado.png"
+import mercadoImg from "../assets/market.jpg"
 
 
 export default function Mercado() {
