@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ruletaImg from "../assets/ruleta.png"; // la imagen que subiste
 import ruletaBg from "../assets/ruleta-bg.png"; // fondo tropical
-import "./styles.css";
+
 
 export default function Ruleta({ onClose }) {
   const [selectedOption, setSelectedOption] = useState(null);
