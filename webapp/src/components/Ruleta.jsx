@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ruletaImg from "../assets/ruleta.png";
-import ruletaBg from "../assets/ruleta_bg.png"; // fondo distinto para la ruleta
+import ruletaBg from "../assets/ruleta-bg.png";
 
 export default function Ruleta() {
   const [rotation, setRotation] = useState(0);
@@ -17,12 +17,11 @@ export default function Ruleta() {
 
   return (
     <div className="ruleta-screen">
-      <img src={ruletaBg} alt="Fondo ruleta" className="ruleta-bg" />
+      <img src={ruletaBg} className="ruleta-bg" />
       <div className="ruleta-container">
         <img
           src={ruletaImg}
-          alt="Ruleta tropical"
-          className={`ruleta ${spinning ? "spinning" : ""}`}
+          className="ruleta"
           style={{ transform: `rotate(${rotation}deg)` }}
         />
         <button className="spin-btn" onClick={spinWheel}>Girar</button>
