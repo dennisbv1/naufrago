@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ruletaBg from "../assets/ruleta-bg.png";
-import "./styles.css";
+
 
 export default function Ruleta({ onClose }) {
   const [selectedOption, setSelectedOption] = useState(null);
