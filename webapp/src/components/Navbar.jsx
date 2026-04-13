@@ -1,10 +1,11 @@
 import React from "react";
-
+import ruletaIcon from "../assets/ruleta.png";
+import mercadoIcon from "../assets/mercado.png";
 
 export default function Navbar({ currentTab, setCurrentTab }) {
   const tabs = [
-    { id: "ruleta", label: "Ruleta", icon: "/assets/ruleta.png" },
-    { id: "mercado", label: "Mercado", icon: "/assets/mercado.png" },
+    { id: "ruleta", label: "Ruleta", icon: ruletaIcon },
+    { id: "mercado", label: "Mercado", icon: mercadoIcon },
   ];
 
   return (

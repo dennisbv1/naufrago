@@ -1,5 +1,5 @@
 import React from "react";
-import naufragoImg from "../assets/naufrago.png";
+import naufragoImg from "../assets/naufrago.png"; // fondo del náufrago
 
 export default function Scene() {
   return (

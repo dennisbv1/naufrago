@@ -1,6 +1,5 @@
 import React from "react";
-import mercadoImg from "../assets/market.jpg"
-
+import mercadoImg from "../assets/market.jpg";
 
 export default function Mercado() {
   return (
@@ -9,7 +8,6 @@ export default function Mercado() {
       <div className="mercado-content">
         <h2>Ofertas del mercado</h2>
         <div className="mercado-scroll">
-          {/* Aquí irán las ofertas dinámicas */}
           <p>Oferta 1: Pez raro</p>
           <p>Oferta 2: Pez legendario</p>
           <p>Oferta 3: Pez común</p>
