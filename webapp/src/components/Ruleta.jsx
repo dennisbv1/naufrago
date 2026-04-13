@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ruletaImg from "../assets/ruleta.png";
-import ruletaBg from "../assets/ruleta-bg.png"; // fondo distinto para la ruleta
+import ruletaBg from "../assets/ruleta_bg.png"; // fondo distinto para la ruleta
 
 export default function Ruleta() {
   const [rotation, setRotation] = useState(0);
