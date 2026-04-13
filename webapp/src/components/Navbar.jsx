@@ -1,6 +1,6 @@
 import React from "react";
 import ruletaIcon from "../assets/ruleta.png";
-import mercadoIcon from "../assets/mercado.png";
+import mercadoIcon from "../assets/market.jpg";
 
 export default function Navbar({ currentTab, setCurrentTab }) {
   const tabs = [
