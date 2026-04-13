@@ -71,15 +71,15 @@ body, html, #root {
 
 .ruleta-bg {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  top: 0;
+  left: 0;
   z-index: 0;
 }
 
-/* Botón cerrar */
+/* Botón X */
 .close-btn {
   position: absolute;
   top: 20px;
@@ -91,56 +91,52 @@ body, html, #root {
   height: 40px;
   font-size: 1.2rem;
   cursor: pointer;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* Contenedor ruleta */
-.ruleta-container {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Flecha arriba */
+/* Flecha apuntando hacia ABAJO */
 .arrow {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 25px solid black;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 28px solid black;
   margin-bottom: 10px;
+  z-index: 3;
 }
 
-/* Imagen ruleta */
+/* Ruleta */
 .ruleta-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 300px;
+  height: 300px;
 }
 
 .ruleta {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
+  transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Botón girar en el centro */
 .spin-btn {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ff7a5a;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  font-size: 1rem;
+  width: 90px;
+  height: 90px;
+  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 3;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* Cuadro resultado */
+/* Resultado */
 .result-box {
   position: absolute;
   bottom: 100px;
@@ -148,12 +144,12 @@ body, html, #root {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .result-box p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 10px;
 }

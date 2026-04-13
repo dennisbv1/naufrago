@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import ruletaImg from "../assets/ruleta.png"; // la imagen que subiste
-import ruletaBg from "../assets/ruleta-bg.png"; // fondo tropical
+import ruletaImg from "../assets/ruleta.png"; 
+import ruletaBg from "../assets/ruleta-bg.png";
 
 
 export default function Ruleta({ onClose }) {
+  const [rotation, setRotation] = useState(0);
+  const [spinning, setSpinning] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const options = [
@@ -13,24 +15,44 @@ export default function Ruleta({ onClose }) {
   ];
 
   const spinWheel = () => {
-    const index = Math.floor(Math.random() * options.length);
-    setSelectedOption(options[index]);
+    if (spinning) return;
+
+    setSelectedOption(null);
+    setSpinning(true);
+
+    const randomTurns = 360 * (5 + Math.random() * 3);
+    const finalRotation = rotation + randomTurns;
+
+    setRotation(finalRotation);
+
+    setTimeout(() => {
+      const degrees = finalRotation % 360;
+      const slice = 360 / options.length;
+      const index = Math.floor((360 - degrees) / slice) % options.length;
+
+      setSelectedOption(options[index]);
+      setSpinning(false);
+    }, 4000);
   };
 
   return (
     <div className="ruleta-screen">
-      <img src={ruletaBg} alt="Fondo ruleta" className="ruleta-bg" />
+      <img src={ruletaBg} className="ruleta-bg" />
+
       <button className="close-btn" onClick={onClose}>✕</button>
 
-      <div className="ruleta-container">
-        {/* Flecha arriba */}
-        <div className="arrow"></div>
+      <div className="arrow"></div>
 
-        {/* Imagen de la ruleta */}
-        <div className="ruleta-wrapper">
-          <img src={ruletaImg} alt="Ruleta" className="ruleta" />
-          <button className="spin-btn" onClick={spinWheel}>Girar</button>
-        </div>
+      <div className="ruleta-wrapper">
+        <img
+          src={ruletaImg}
+          className={`ruleta ${spinning ? "spinning" : ""}`}
+          style={{ transform: `rotate(${rotation}deg)` }}
+        />
+
+        <button className="spin-btn" onClick={spinWheel}>
+          Girar
+        </button>
       </div>
 
       {selectedOption && (

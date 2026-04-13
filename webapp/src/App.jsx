@@ -11,7 +11,10 @@ export default function App() {
   return (
     <div className="app">
       {currentTab === "scene" && <Scene />}
-      {currentTab === "ruleta" && <Ruleta />}
+      {currentTab === "ruleta" && (
+  <Ruleta onClose={() => setCurrentTab("scene")} />
+)}
+
       {currentTab === "mercado" && <Mercado />}
 
       <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
