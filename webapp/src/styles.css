@@ -23,6 +23,7 @@ body, html, #root {
   z-index: 0;
 }
 
+
 /* Navbar inferior */
 .navbar {
   position: absolute;
@@ -62,7 +63,9 @@ body, html, #root {
   left: 0;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
+
 
 .ruleta-bg {
   width: 100%;
