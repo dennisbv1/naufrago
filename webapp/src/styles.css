@@ -166,25 +166,77 @@ body, html, #root {
 
 
 /* Mercado */
-.mercado-container {
+/* Pantalla del mercado */
+.mercado-screen {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
 }
 
-.mercado-bg {
+/* Ventana del mercado */
+.mercado-window {
+  position: relative;
   width: 90%;
-  max-width: 400px;
+  max-width: 380px;
+  height: 75%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Imagen del mercado */
+.mercado-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* Botón cerrar */
+.mercado-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Contenido del mercado */
 .mercado-content {
   position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  bottom: 10%;
+  top: 80px;
+  left: 20px;
+  right: 20px;
+  bottom: 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scroll interno */
+.mercado-scroll {
+  margin-top: 10px;
   overflow-y: auto;
+  padding-right: 10px;
+}
+
+.mercado-scroll p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
   color: #3b2a1a;
 }
+
