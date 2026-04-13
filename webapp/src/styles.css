@@ -113,9 +113,8 @@ body, html, #root {
 }
 
 .ruleta {
-  width: 300px;        /* tamaño fijo en ancho */
-  aspect-ratio: auto; /* asegura que sea siempre un cuadrado */
-  height: auto;        /* deja que el alto se calcule automáticamente */
+  width: 300px;        
+  aspect-ratio: auto; 
   transition: transform 4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
